@@ -21,54 +21,45 @@ const Initiatives = () => {
   const InCards = [
     {
       key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
+      content: <img src='img\IMG_20240924_121947.jpg' alt="1" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/utkrash/utkarsh.html"
+      content: <img src='img\IMG_20240924_121915.jpg' alt="2" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
+      content: <img src='img/IMG_20240924_122007.jpg' alt="3" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
+      content: <img src='img\IMG_20240924_122300.jpg' alt="4" />,
       link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
     },
     {
       key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
+      content: <img src='img\IMG_20240924_122100.jpg' alt="5" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
+      content: <img src='img\IMG_20240924_121858.jpg' alt="1" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/aatmabodh/aatmabodh.html"
+      content: <img src='img\IMG_20240924_122045.jpg' alt="2" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
     {
       key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
+      content: <img src='img\IMG_20240924_121931.jpg' alt="3" />,
+      link: "https://www.facebook.com/groups/1012334746129247/?ref=share&mibextid=NSMWBT"
     },
-    {
-      key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    },
+    
   ].map((slide, index) => {
     return {
       ...slide,
@@ -93,7 +84,7 @@ const Initiatives = () => {
       <br />
       <br />
       <div className="title">
-        <h1><span>OUR</span> INITIATIVES</h1>
+        <h1 ><span>OUR</span> INITIATIVES</h1>
       </div>
       <div className="initiative-cards">
         <Carousel

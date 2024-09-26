@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import contact from "../assets/contactus.png";
 import '../css/contactForm.css';
+import axios from 'axios';
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ function ContactForm() {
     });
 
     const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState(''); // New state for success message
 
     const validateForm = () => {
         let errors = {};
@@ -43,30 +44,41 @@ function ContactForm() {
         return isValid;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            // Perform action (e.g., send form data to server)
-            document.getElementById("success").innerHTML="✔ Message Sent Successfully!";
-            console.log('Form submitted successfully');
-            // Reset form fields
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            });
-        }else{
-            document.getElementById("success").innerHTML="";
+            try {
+                const response = await axios.post(`https://liberty-responsibility-backend.onrender.com/api/contact`, formData,
+                    {headers: {
+                        'Content-Type': 'application/json'
+                    }}
+                );
+                if (response.status === 200) {
+                    setSuccessMessage('✔ Message Sent Successfully!');
+                    console.log('Form submitted successfully');
+                    // Reset form fields
+                    setFormData({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    });
+                }
+            } catch (error) {
+                console.error('There was an error submitting the form:', error);
+                setSuccessMessage('❌ Error sending message.');
+            }
+        } else {
+            setSuccessMessage(''); // Clear success message on validation failure
         }
     };
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
+
     return (
         <>
-            {/* <!-- Contact Start --> */}
             <div className="contact">
                 <div className="container">
                     <div className="section-header text-center">
@@ -74,10 +86,10 @@ function ContactForm() {
                         <h2>Contact for any query</h2>
                     </div>
                     <div className="contact-img">
-                        <img src={contact} alt="Image" />
+                        <img src='img\IMG_20240924_121947.jpg' alt="Image" />
                     </div>
                     <div className="contact-form">
-                        <div className='sent text-success' id="success"></div>
+                        {successMessage && <div className="sent text-success">{successMessage}</div>}
                         <form name="sentMessage" id="contactForm" onSubmit={handleSubmit} noValidate>
                             <div className="control-group">
                                 <input type="text" className="form-control" id="name" placeholder="Your Name" value={formData.name} onChange={handleChange} autoComplete='name' required />
@@ -102,7 +114,6 @@ function ContactForm() {
                     </div>
                 </div>
             </div>
-            {/* <!-- Contact End --> */}
         </>
     );
 }

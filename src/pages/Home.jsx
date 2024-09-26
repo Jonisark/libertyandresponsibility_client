@@ -14,10 +14,10 @@ export default function Home() {
             <Navbar />
             <div className="video-container">
                 <video src={space} type="video/mp4" autoPlay loop muted>
-                    Sorry, your browser doesn't support videos.
+                    Sorry, your browser doesn't support the video tag.
                 </video>
                 <div className="typewriter">
-                    <h2>ACTION, SERVICE, HOPE FOR AIDS... </h2>
+                    <h2>WE ARE FOR OUTHERS... </h2>
                 </div>
             </div>
             <Landing />

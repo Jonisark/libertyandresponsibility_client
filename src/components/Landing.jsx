@@ -9,24 +9,25 @@ export default function Landing() {
                 <span className="left">
                     <div className="caption1">
                         <hr />
-                        <h4>WE ARE SANJIVANI NGO</h4>
+                        <h4>WE ARE LIBERTY AND RESPONSIBILITY NGO</h4>
                     </div>
                     <div className="titles">
                         <div className="caption2">
-                            <p>At <span>Sanjivani,</span> we work towards the betterment of our <span>world</span> </p>
+                            <p>At <span>LIBERTY AND RESPONSIBILITY,</span> we work towards the betterment of our <span>world</span> </p>
                         </div>
                         <div className="caption3">
                             <p>Bring out the change in society by spreading hands to help the unprivileged children and other backward communities.</p>
                         </div>
                         <div className="btns">
-                            <button onClick={() => window.open("https://swd.vit.edu/", "_blank", "noopener noreferrer")} type="button" className="btn btn-outline-info">Know More</button>
+                            
                             <button type="button" className="btn btn-success" onClick={()=>navigate("/donate")}>DONATE</button>
                         </div>
                     </div>
 
                 </span>
                 <span className="right">
-                    <img src={main} alt="Smiling Faces" />
+                    {/* <img src={main} alt="Smiling Faces" /> */}
+                    <img className='image' src="img\IMG_20240924_122019.jpg" alt="image" />
                 </span>
             </div>
     );
